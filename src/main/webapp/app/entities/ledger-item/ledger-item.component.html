@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="bizioApp.ledgerItem.home.title">Ledger Items</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-ledger-item" [routerLink]="['/ledger-item/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="bizioApp.ledgerItem.home.createLabel">
+            Create a new Ledger Item
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="ledgerItems?.length === 0">
+        <span jhiTranslate="bizioApp.ledgerItem.home.notFound">No ledgerItems found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="ledgerItems?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="reset.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="date"><span jhiTranslate="bizioApp.ledgerItem.date">Date</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="document"><span jhiTranslate="bizioApp.ledgerItem.document">Document</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="explanation"><span jhiTranslate="bizioApp.ledgerItem.explanation">Explanation</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="type"><span jhiTranslate="bizioApp.ledgerItem.type">Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="value"><span jhiTranslate="bizioApp.ledgerItem.value">Value</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="year"><span jhiTranslate="bizioApp.ledgerItem.year">Year</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="client.id"><span jhiTranslate="bizioApp.ledgerItem.client">Client</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+                <tr *ngFor="let ledgerItem of ledgerItems ;trackBy: trackId">
+                    <td><a [routerLink]="['/ledger-item', ledgerItem.id, 'view']">{{ ledgerItem.id }}</a></td>
+                    <td>{{ ledgerItem.date | date:'mediumDate' }}</td>
+                    <td>{{ ledgerItem.document }}</td>
+                    <td>{{ ledgerItem.explanation }}</td>
+                    <td jhiTranslate="{{ 'bizioApp.LedgerType.' + ledgerItem.type }}">{{ ledgerItem.type }}</td>
+                    <td>{{ ledgerItem.value }}</td>
+                    <td>{{ ledgerItem.year }}</td>
+                    <td>
+                        <div *ngIf="ledgerItem.client">
+                            <a [routerLink]="['/client', ledgerItem.client?.id, 'view']" >{{ ledgerItem.client?.name }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/ledger-item', ledgerItem.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/ledger-item', ledgerItem.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(ledgerItem)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

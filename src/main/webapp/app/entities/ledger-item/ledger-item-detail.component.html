@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="ledgerItem">
+            <h2><span jhiTranslate="bizioApp.ledgerItem.detail.title">Ledger Item</span> {{ ledgerItem.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bizioApp.ledgerItem.date">Date</span></dt>
+                <dd>
+                    <span>{{ ledgerItem.date }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.ledgerItem.document">Document</span></dt>
+                <dd>
+                    <span>{{ ledgerItem.document }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.ledgerItem.explanation">Explanation</span></dt>
+                <dd>
+                    <span>{{ ledgerItem.explanation }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.ledgerItem.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'bizioApp.LedgerType.' + ledgerItem.type }}">{{ ledgerItem.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.ledgerItem.value">Value</span></dt>
+                <dd>
+                    <span>{{ ledgerItem.value }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.ledgerItem.year">Year</span></dt>
+                <dd>
+                    <span>{{ ledgerItem.year }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.ledgerItem.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="ledgerItem.client">
+                        <a [routerLink]="['/client', ledgerItem.client?.id, 'view']">{{ ledgerItem.client?.name }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ledger-item', ledgerItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

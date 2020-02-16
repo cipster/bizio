@@ -1,0 +1,28 @@
+{
+  "bizioApp": {
+    "ledgerItem": {
+      "home": {
+        "title": "Ledger Items",
+        "createLabel": "Creeare o nouă entitate Ledger Item",
+        "createOrEditLabel": "Creeare sau editare Ledger Item",
+        "notFound": "No Ledger Items found"
+      },
+      "created": "A fost creată o nouă entitate Ledger Item cu identificatorul {{ param }}",
+      "updated": "Ledger Item cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Ledger Item cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Ledger Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Ledger Item"
+      },
+      "date": "Date",
+      "document": "Document",
+      "explanation": "Explanation",
+      "type": "Type",
+      "value": "Value",
+      "year": "Year",
+      "client": "Client"
+    }
+  }
+}

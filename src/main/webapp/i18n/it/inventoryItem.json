@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "inventoryItem": {
+      "home": {
+        "title": "InventoryItems",
+        "createLabel": "Genera un nuovo Inventory Item",
+        "createOrEditLabel": "Genera o modifica un Inventory Item",
+        "notFound": "No Inventory Items found"
+      },
+      "created": "&Egrave; stato generato un nuovo Inventory Item con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Inventory Item identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Inventory Item con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Inventory Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Inventory Item"
+      },
+      "name": "Name",
+      "value": "Value"
+    }
+  }
+}

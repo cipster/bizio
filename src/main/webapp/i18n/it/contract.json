@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "contract": {
+      "home": {
+        "title": "Contracts",
+        "createLabel": "Genera un nuovo Contract",
+        "createOrEditLabel": "Genera o modifica un Contract",
+        "notFound": "No Contracts found"
+      },
+      "created": "&Egrave; stato generato un nuovo Contract con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Contract identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Contract con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Contract {{ id }}?"
+      },
+      "detail": {
+        "title": "Contract"
+      },
+      "identifier": "Identifier",
+      "client": "Client"
+    }
+  }
+}

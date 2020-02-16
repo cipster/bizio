@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="contract">
+            <h2><span jhiTranslate="bizioApp.contract.detail.title">Contract</span> {{ contract.identifier }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bizioApp.contract.identifier">Identifier</span></dt>
+                <dd>
+                    <span>{{ contract.identifier }}</span>
+                </dd>
+                <dt><span jhiTranslate="bizioApp.contract.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="contract.client">
+                        <a [routerLink]="['/client', contract.client?.id, 'view']">{{ contract.client?.name }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/contract', contract.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

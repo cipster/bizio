@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "contract": {
+      "home": {
+        "title": "Contracts",
+        "createLabel": "Contract erstellen",
+        "createOrEditLabel": "Contract erstellen oder bearbeiten",
+        "notFound": "No Contracts found"
+      },
+      "created": "Contract erstellt mit ID {{ param }}",
+      "updated": "Contract aktualisiert mit ID {{ param }}",
+      "deleted": "Contract gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Contract {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Contract"
+      },
+      "identifier": "Identifier",
+      "client": "Client"
+    }
+  }
+}

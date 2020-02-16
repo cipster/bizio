@@ -1,0 +1,28 @@
+{
+  "bizioApp": {
+    "ledgerItem": {
+      "home": {
+        "title": "LedgerItems",
+        "createLabel": "Créer un nouveau Ledger Item",
+        "createOrEditLabel": "Créer ou éditer un Ledger Item",
+        "notFound": "Aucun Ledger Item trouvé"
+      },
+      "created": "Un nouveau Ledger Item a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Ledger Item avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Ledger Item avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Ledger Item {{ id }} ?"
+      },
+      "detail": {
+        "title": "Ledger Item"
+      },
+      "date": "Date",
+      "document": "Document",
+      "explanation": "Explanation",
+      "type": "Type",
+      "value": "Value",
+      "year": "Year",
+      "client": "Client"
+    }
+  }
+}

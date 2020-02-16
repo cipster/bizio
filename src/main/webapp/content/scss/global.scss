@@ -88,6 +88,8 @@ Custom alerts for notification
 .alerts {
   .alert {
     text-overflow: ellipsis;
+    margin: 10pt 0;
+
     pre {
       background: none;
       border: none;
@@ -96,6 +98,7 @@ Custom alerts for notification
       padding: 0;
       margin: 0;
     }
+
     .popover pre {
       font-size: 10px;
     }
@@ -164,3 +167,7 @@ ui bootstrap tweaks
 }
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+.jh-create-entity {
+  margin-bottom: 7pt;
+}

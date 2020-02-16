@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "inventoryItem": {
+      "home": {
+        "title": "Inventory Items",
+        "createLabel": "Creeare o nouă entitate Inventory Item",
+        "createOrEditLabel": "Creeare sau editare Inventory Item",
+        "notFound": "No Inventory Items found"
+      },
+      "created": "A fost creată o nouă entitate Inventory Item cu identificatorul {{ param }}",
+      "updated": "Inventory Item cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Inventory Item cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Inventory Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Inventory Item"
+      },
+      "name": "Name",
+      "value": "Value"
+    }
+  }
+}

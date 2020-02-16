@@ -1,0 +1,11 @@
+{
+  "bizioApp": {
+    "LedgerType": {
+      "null": "",
+      "INCOME_CASH": "INCOME_CASH",
+      "INCOME_BANK": "INCOME_BANK",
+      "PAYMENT_CASH": "PAYMENT_CASH",
+      "PAYMENT_BANK": "PAYMENT_BANK"
+    }
+  }
+}

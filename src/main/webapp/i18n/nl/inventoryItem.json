@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "inventoryItem": {
+      "home": {
+        "title": "Inventory Items",
+        "createLabel": "Maak een nieuwe Inventory Item",
+        "createOrEditLabel": "Maak of wijzig een Inventory Item",
+        "notFound": "No Inventory Items found"
+      },
+      "created": "A new Inventory Item is created with identifier {{ param }}",
+      "updated": "A Inventory Item is updated with identifier {{ param }}",
+      "deleted": "A Inventory Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Inventory Item {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Inventory Item"
+      },
+      "name": "Name",
+      "value": "Value"
+    }
+  }
+}

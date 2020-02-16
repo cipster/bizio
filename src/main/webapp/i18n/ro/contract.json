@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "contract": {
+      "home": {
+        "title": "Contracts",
+        "createLabel": "Creeare o nouă entitate Contract",
+        "createOrEditLabel": "Creeare sau editare Contract",
+        "notFound": "No Contracts found"
+      },
+      "created": "A fost creată o nouă entitate Contract cu identificatorul {{ param }}",
+      "updated": "Contract cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Contract cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Contract {{ id }}?"
+      },
+      "detail": {
+        "title": "Contract"
+      },
+      "identifier": "Identifier",
+      "client": "Client"
+    }
+  }
+}

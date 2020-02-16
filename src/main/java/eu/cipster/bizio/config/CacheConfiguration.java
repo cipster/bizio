@@ -42,6 +42,14 @@ public class CacheConfiguration {
             createCache(cm, eu.cipster.bizio.domain.User.class.getName());
             createCache(cm, eu.cipster.bizio.domain.Authority.class.getName());
             createCache(cm, eu.cipster.bizio.domain.User.class.getName() + ".authorities");
+            createCache(cm, eu.cipster.bizio.domain.InventoryItem.class.getName());
+            createCache(cm, eu.cipster.bizio.domain.LedgerItem.class.getName());
+            createCache(cm, eu.cipster.bizio.domain.LedgerItem.class.getName() + ".clients");
+            createCache(cm, eu.cipster.bizio.domain.Client.class.getName());
+            createCache(cm, eu.cipster.bizio.domain.Contract.class.getName());
+            createCache(cm, eu.cipster.bizio.domain.Contract.class.getName() + ".clients");
+            createCache(cm, eu.cipster.bizio.domain.Client.class.getName() + ".ledgerItems");
+            createCache(cm, eu.cipster.bizio.domain.Client.class.getName() + ".contracts");
             // jhipster-needle-ehcache-add-entry
         };
     }

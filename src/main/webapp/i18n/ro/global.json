@@ -10,6 +10,10 @@
         "bankAccount": "ContBancar",
         "label": "Etichetă",
         "operation": "Operație",
+        "inventoryItem": "Inventory Item",
+        "ledgerItem": "Ledger Item",
+        "client": "Client",
+        "contract": "Contract",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

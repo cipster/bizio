@@ -1,0 +1,46 @@
+entity InventoryItem {
+	name String required
+	value BigDecimal required
+}
+
+entity LedgerItem {
+	date LocalDate required
+    document String required
+    explanation String required
+    type LedgerType required
+    value BigDecimal required
+    year Integer required
+}
+
+enum LedgerType {
+	INCOME_CASH,
+    INCOME_BANK,
+    PAYMENT_CASH,
+    PAYMENT_BANK
+}
+
+entity Client {
+	name String required unique
+}
+
+entity Contract {
+	identifier String required unique
+}
+
+relationship OneToMany {
+	Client to LedgerItem{client},
+    Client to Contract{client}
+}
+
+
+// Set pagination options
+paginate LedgerItem with infinite-scroll
+paginate Client, Contract, InventoryItem with pagination
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+// service all with serviceImpl except Employee, Job
+service all with serviceImpl
+// Set an angular suffix
+// angularSuffix * with mySuffix

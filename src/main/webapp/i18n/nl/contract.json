@@ -1,0 +1,23 @@
+{
+  "bizioApp": {
+    "contract": {
+      "home": {
+        "title": "Contracts",
+        "createLabel": "Maak een nieuwe Contract",
+        "createOrEditLabel": "Maak of wijzig een Contract",
+        "notFound": "No Contracts found"
+      },
+      "created": "A new Contract is created with identifier {{ param }}",
+      "updated": "A Contract is updated with identifier {{ param }}",
+      "deleted": "A Contract is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Contract {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Contract"
+      },
+      "identifier": "Identifier",
+      "client": "Client"
+    }
+  }
+}

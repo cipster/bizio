@@ -1,0 +1,37 @@
+{
+    "name": "Client",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "ledgerItem",
+            "otherEntityRelationshipName": "client",
+            "relationshipName": "ledgerItem"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "contract",
+            "otherEntityRelationshipName": "client",
+            "relationshipName": "contract"
+        }
+    ],
+    "changelogDate": "20200216110400",
+    "entityTableName": "client",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
