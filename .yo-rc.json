@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "eu.cipster.bizio",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.7.1",
+    "applicationType": "monolith",
+    "baseName": "bizio",
+    "packageName": "eu.cipster.bizio",
+    "packageFolder": "eu/cipster/bizio",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NmMzNjNhNjFmZDRhZWM1NjlmNTkyN2E2MDk3M2U4NjYyOGZjOTE3YzVjODcwZmNmYTMxODEzZDY5YTUxZWI5N2RiYzliMjZlMTg2MDBiNmNmZGQzOTEwZDY3NDA1ZmIzZWVhM2IzNjdkYjcyNzU4MjM0NDU3N2FlNTZjZWMxZTk=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "materia",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1581848060290,
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "nl", "fr", "de", "it", "ro", "es"],
+    "blueprints": []
+  }
+}
